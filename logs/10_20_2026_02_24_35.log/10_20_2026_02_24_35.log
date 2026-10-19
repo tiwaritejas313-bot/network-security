@@ -1,0 +1,20 @@
+[2026-10-20 02:24:36,096] root - INFO - Initiating data ingestion
+[2026-10-20 02:24:36,096] root - INFO - Initiating data ingestion
+[2026-10-20 02:24:38,632] root - INFO - Data exported to feature store: ARTIFACTS/10_20_2026_02_24_35/feature_store/phishingdata.csv
+[2026-10-20 02:24:38,634] root - INFO - performed train test split
+[2026-10-20 02:24:38,634] root - INFO - exited split_data_as_train_test method
+[2026-10-20 02:24:38,634] root - INFO - Exporting train and test file path
+[2026-10-20 02:24:38,659] root - INFO - Exported train and test file path
+[2026-10-20 02:24:38,659] root - INFO - Initiating data ingestion
+[2026-10-20 02:24:38,659] root - INFO - Initiation of data ingestion completed
+[2026-10-20 02:24:38,659] root - INFO - Data validation started
+[2026-10-20 02:24:38,661] root - INFO - Inititate data validation
+[2026-10-20 02:24:38,661] root - INFO - Initiating data validation
+[2026-10-20 02:24:38,675] root - INFO - Required number of columns: 31
+[2026-10-20 02:24:38,675] root - INFO - DataFrame number of columns: 31
+[2026-10-20 02:24:38,675] root - INFO - DataFrame has the required number of columns
+[2026-10-20 02:24:38,675] root - INFO - Required number of columns: 31
+[2026-10-20 02:24:38,675] root - INFO - DataFrame number of columns: 31
+[2026-10-20 02:24:38,675] root - INFO - DataFrame has the required number of columns
+[2026-10-20 02:24:38,755] root - INFO - Data validation completed
+[2026-10-20 02:24:38,755] root - INFO - Initiation of data validation completed

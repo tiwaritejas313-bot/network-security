@@ -1,0 +1,9 @@
+[2026-10-20 02:18:39,468] root - INFO - Initiating data ingestion
+[2026-10-20 02:18:39,468] root - INFO - Initiating data ingestion
+[2026-10-20 02:18:41,581] root - INFO - Data exported to feature store: ARTIFACTS/10_20_2026_02_18_38/feature_store/phishingdata.csv
+[2026-10-20 02:18:41,583] root - INFO - performed train test split
+[2026-10-20 02:18:41,583] root - INFO - exited split_data_as_train_test method
+[2026-10-20 02:18:41,583] root - INFO - Exporting train and test file path
+[2026-10-20 02:18:41,608] root - INFO - Exported train and test file path
+[2026-10-20 02:18:41,608] root - INFO - Initiating data ingestion
+[2026-10-20 02:18:41,608] root - INFO - Initiation of data ingestion completed
