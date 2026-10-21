@@ -6,6 +6,8 @@ import numpy as np
 import pandas as pd
 from network_security.exception.exception import NetworkSecurityException
 from network_security.network_logger.logger import logging
+from sklearn.metrics import r2_score
+from sklearn.model_selection import GridSearchCV
 
 def read_yaml_file(file_path:str)->dict:
      try:
@@ -42,5 +44,86 @@ def save_object(file_path:str,obj:object):
         os.makedirs(os.path.dirname(file_path),exist_ok=True)
         with open(file_path,"wb") as file_obj:
             pickle.dump(obj,file_obj)
+    except Exception as e:
+        raise NetworkSecurityException(e, sys) from e
+
+def load_object(file_path:str)->object:
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"No file found at path: {file_path}")
+        
+        with open(file_path,"rb") as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        raise NetworkSecurityException(e, sys) from e
+
+def load_numpy_array_data(file_path:str) -> np.array:
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"No file found at path: {file_path}")
+        
+        with open(file_path,"rb") as file_obj:
+            return np.load(file_obj)
+    except Exception as e:
+        raise NetworkSecurityException(e, sys) from e
+
+
+
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import accuracy_score
+
+
+def evaluate_model(
+    X_train,
+    y_train,
+    X_test,
+    y_test,
+    models,
+    params
+):
+    try:
+        report = {}
+
+        for model_name, model in models.items():
+
+            logging.info(f"Training model: {model_name}")
+
+            # Get hyperparameters for the current model
+            model_params = params.get(model_name, {})
+
+            # Hyperparameter tuning
+            grid_search = GridSearchCV(
+                estimator=model,
+                param_grid=model_params,
+                cv=3,
+                scoring="accuracy",
+                n_jobs=-1,
+                error_score="raise"
+            )
+
+            grid_search.fit(X_train, y_train)
+
+            # Get the best fitted model
+            best_model = grid_search.best_estimator_
+
+            # Update models dictionary with fitted model
+            models[model_name] = best_model
+
+            # Evaluate on test data
+            y_test_pred = best_model.predict(X_test)
+
+            test_model_score = accuracy_score(
+                y_test,
+                y_test_pred
+            )
+
+            report[model_name] = test_model_score
+
+            logging.info(
+                f"{model_name}: {test_model_score}"
+            )
+
+        return report
+
     except Exception as e:
         raise NetworkSecurityException(e, sys) from e
