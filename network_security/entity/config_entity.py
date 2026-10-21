@@ -7,15 +7,20 @@ import os
 class TrainingPipelineConfig:
     def __init__(self, timestamp=datetime.now()):
         timestamp = timestamp.strftime("%m_%d_%Y_%H_%M_%S")
+
         self.pipeline_name = trainingPipeline.PIPELINE_NAME
+
         self.artifact_dir = os.path.join(
-            trainingPipeline.PIPELINE_ARTIFACTS, timestamp
+            trainingPipeline.PIPELINE_ARTIFACTS,
+            timestamp
         )
+
         self.timestamp: str = timestamp
 
 
 class DataIngestionConfig:
     def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+
         self.data_ingestion_dir: str = os.path.join(
             training_pipeline_config.artifact_dir,
             trainingPipeline.DATA_INGESTION_DIR_NAME
@@ -42,15 +47,19 @@ class DataIngestionConfig:
         self.train_test_split_ratio: float = (
             trainingPipeline.DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO
         )
+
         self.collection_name: str = (
             trainingPipeline.DATA_INGESTION_COLLECTION_NAME
         )
+
         self.database_name: str = (
             trainingPipeline.DATA_INGESTION_DATABASE_NAME
         )
 
+
 class DataValidationConfig:
     def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+
         self.data_validation_dir: str = os.path.join(
             training_pipeline_config.artifact_dir,
             trainingPipeline.DATA_VALIDATION_DIR_NAME
@@ -89,5 +98,37 @@ class DataValidationConfig:
         self.drift_report_file_path: str = os.path.join(
             self.data_validation_dir,
             trainingPipeline.DATA_VALIDATION_DRIFT_REPORT_DIR,
-            trainingPipeline.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME,
+            trainingPipeline.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME
+        )
+
+
+class DataTransformationConfig:
+    def __init__(
+        self,
+        training_pipeline_config: TrainingPipelineConfig
+    ):
+
+        self.data_transformation_dir: str = os.path.join(
+            training_pipeline_config.artifact_dir,
+            trainingPipeline.DATA_TRANSFORMATION_DIR_NAME
+        )
+
+        # Save transformed training data as train.npy
+        self.transformed_train_file_path: str = os.path.join(
+            self.data_transformation_dir,
+            trainingPipeline.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+            "train.npy"
+        )
+
+        # Save transformed testing data as test.npy
+        self.transformed_test_file_path: str = os.path.join(
+            self.data_transformation_dir,
+            trainingPipeline.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+            "test.npy"
+        )
+
+        self.preprocessor_object_path: str = os.path.join(
+            self.data_transformation_dir,
+            trainingPipeline.DATA_TRANSFORMATION_PREPROCESSOR_DIR,
+            trainingPipeline.DATA_TRANSFORMATION_PREPROCESSOR_OBJECT__FILE_NAME
         )

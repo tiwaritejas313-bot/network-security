@@ -1,0 +1,27 @@
+[2026-10-22 03:05:49,933] root - INFO - Initiating data ingestion
+[2026-10-22 03:05:49,933] root - INFO - Initiating data ingestion
+[2026-10-22 03:05:52,177] root - INFO - Data exported to feature store: ARTIFACTS/10_22_2026_03_05_48/feature_store/phishingdata.csv
+[2026-10-22 03:05:52,179] root - INFO - performed train test split
+[2026-10-22 03:05:52,179] root - INFO - exited split_data_as_train_test method
+[2026-10-22 03:05:52,179] root - INFO - Exporting train and test file path
+[2026-10-22 03:05:52,204] root - INFO - Exported train and test file path
+[2026-10-22 03:05:52,204] root - INFO - Initiating data ingestion
+[2026-10-22 03:05:52,205] root - INFO - Initiation of data ingestion completed
+[2026-10-22 03:05:52,205] root - INFO - Data validation started
+[2026-10-22 03:05:52,207] root - INFO - Inititate data validation
+[2026-10-22 03:05:52,207] root - INFO - Initiating data validation
+[2026-10-22 03:05:52,221] root - INFO - Required number of columns: 31
+[2026-10-22 03:05:52,221] root - INFO - DataFrame number of columns: 31
+[2026-10-22 03:05:52,221] root - INFO - DataFrame has the required number of columns
+[2026-10-22 03:05:52,221] root - INFO - Required number of columns: 31
+[2026-10-22 03:05:52,221] root - INFO - DataFrame number of columns: 31
+[2026-10-22 03:05:52,221] root - INFO - DataFrame has the required number of columns
+[2026-10-22 03:05:52,326] root - INFO - Data validation completed
+[2026-10-22 03:05:52,327] root - INFO - Initiation of data validation completed
+[2026-10-22 03:05:52,327] root - INFO - Initiating data transformation
+[2026-10-22 03:05:52,327] root - INFO - Initiating data transformation
+[2026-10-22 03:05:52,327] root - INFO - Reading data from ARTIFACTS/10_22_2026_03_05_48/data_validation/validated/train.csv
+[2026-10-22 03:05:52,336] root - INFO - Reading data from ARTIFACTS/10_22_2026_03_05_48/data_validation/validated/test.csv
+[2026-10-22 03:05:52,340] root - INFO - Data transformer object created
+[2026-10-22 03:05:52,360] root - INFO - Data transformation completed
+[2026-10-22 03:05:52,360] root - INFO - Initiation of data transformation completed
