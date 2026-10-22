@@ -1,0 +1,52 @@
+[2026-10-22 19:29:25,862] root - INFO - Initiating data ingestion
+[2026-10-22 19:29:25,862] root - INFO - Initiating data ingestion
+[2026-10-22 19:29:28,222] root - INFO - Data exported to feature store: ARTIFACTS/10_22_2026_19_29_23/feature_store/phishingdata.csv
+[2026-10-22 19:29:28,223] root - INFO - performed train test split
+[2026-10-22 19:29:28,223] root - INFO - exited split_data_as_train_test method
+[2026-10-22 19:29:28,223] root - INFO - Exporting train and test file path
+[2026-10-22 19:29:28,248] root - INFO - Exported train and test file path
+[2026-10-22 19:29:28,248] root - INFO - Initiating data ingestion
+[2026-10-22 19:29:28,248] root - INFO - Initiation of data ingestion completed
+[2026-10-22 19:29:28,248] root - INFO - Data validation started
+[2026-10-22 19:29:28,251] root - INFO - Inititate data validation
+[2026-10-22 19:29:28,251] root - INFO - Initiating data validation
+[2026-10-22 19:29:28,263] root - INFO - Required number of columns: 31
+[2026-10-22 19:29:28,263] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:29:28,263] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:29:28,263] root - INFO - Required number of columns: 31
+[2026-10-22 19:29:28,263] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:29:28,263] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:29:28,359] root - INFO - Data validation completed
+[2026-10-22 19:29:28,359] root - INFO - Initiation of data validation completed
+[2026-10-22 19:29:28,359] root - INFO - Initiating data transformation
+[2026-10-22 19:29:28,359] root - INFO - Initiating data transformation
+[2026-10-22 19:29:28,359] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_29_23/data_validation/validated/train.csv
+[2026-10-22 19:29:28,369] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_29_23/data_validation/validated/test.csv
+[2026-10-22 19:29:28,373] root - INFO - Data transformer object created
+[2026-10-22 19:29:28,389] root - INFO - Data transformation completed
+[2026-10-22 19:29:28,389] root - INFO - Initiation of data transformation completed
+[2026-10-22 19:29:28,389] root - INFO - model training started
+[2026-10-22 19:29:28,389] root - INFO - Initiating model training
+[2026-10-22 19:29:28,389] root - INFO - Initiating model training
+[2026-10-22 19:29:28,389] root - INFO - Loading train and test data
+[2026-10-22 19:29:28,390] root - INFO - Train and test data loaded
+[2026-10-22 19:29:28,390] root - INFO - Training model: LogisticRegression
+[2026-10-22 19:29:32,171] root - INFO - LogisticRegression: 0.9276345545002261
+[2026-10-22 19:29:32,172] root - INFO - Training model: KNeighborsClassifier
+[2026-10-22 19:29:32,862] root - INFO - KNeighborsClassifier: 0.9561284486657621
+[2026-10-22 19:29:32,862] root - INFO - Training model: RandomForestClassifier
+[2026-10-22 19:29:33,719] root - INFO - RandomForestClassifier: 0.9746720940750792
+[2026-10-22 19:29:33,719] root - INFO - Training model: AdaBoostClassifier
+[2026-10-22 19:29:34,814] root - INFO - AdaBoostClassifier: 0.9289914066033469
+[2026-10-22 19:29:34,814] root - INFO - Training model: GradientBoostingClassifier
+[2026-10-22 19:29:37,450] root - INFO - GradientBoostingClassifier: 0.9389416553595658
+[2026-10-22 19:29:37,450] root - INFO - Training model: DecisionTreeClassifier
+[2026-10-22 19:29:37,645] root - INFO - DecisionTreeClassifier: 0.9678878335594754
+[2026-10-22 19:29:37,646] root - INFO - Training model: SVC
+[2026-10-22 19:29:41,332] root - INFO - SVC: 0.9651741293532339
+[2026-10-22 19:29:41,333] root - INFO - Model report: {'LogisticRegression': 0.9276345545002261, 'KNeighborsClassifier': 0.9561284486657621, 'RandomForestClassifier': 0.9746720940750792, 'AdaBoostClassifier': 0.9289914066033469, 'GradientBoostingClassifier': 0.9389416553595658, 'DecisionTreeClassifier': 0.9678878335594754, 'SVC': 0.9651741293532339}
+[2026-10-22 19:29:41,333] root - INFO - Best model name: RandomForestClassifier
+[2026-10-22 19:29:41,333] root - INFO - Best model score: 0.9746720940750792
+[2026-10-22 19:29:41,333] root - INFO - Model training completed
+[2026-10-22 19:29:47,894] root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='ARTIFACTS/10_22_2026_19_29_23/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9898203422847869, precision_score=0.9898318604484232, recall_score=0.9898236092265943, accuracy_score=0.9898236092265943), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9746277003577853, precision_score=0.9749491050679088, recall_score=0.9746720940750792, accuracy_score=0.9746720940750792))
+[2026-10-22 19:29:47,895] root - INFO - Initiation of model training completed

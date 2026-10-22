@@ -1,0 +1,50 @@
+[2026-10-22 19:27:23,543] root - INFO - Initiating data ingestion
+[2026-10-22 19:27:23,543] root - INFO - Initiating data ingestion
+[2026-10-22 19:27:26,790] root - INFO - Data exported to feature store: ARTIFACTS/10_22_2026_19_27_19/feature_store/phishingdata.csv
+[2026-10-22 19:27:26,793] root - INFO - performed train test split
+[2026-10-22 19:27:26,793] root - INFO - exited split_data_as_train_test method
+[2026-10-22 19:27:26,793] root - INFO - Exporting train and test file path
+[2026-10-22 19:27:26,827] root - INFO - Exported train and test file path
+[2026-10-22 19:27:26,827] root - INFO - Initiating data ingestion
+[2026-10-22 19:27:26,827] root - INFO - Initiation of data ingestion completed
+[2026-10-22 19:27:26,827] root - INFO - Data validation started
+[2026-10-22 19:27:26,830] root - INFO - Inititate data validation
+[2026-10-22 19:27:26,830] root - INFO - Initiating data validation
+[2026-10-22 19:27:26,849] root - INFO - Required number of columns: 31
+[2026-10-22 19:27:26,849] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:27:26,849] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:27:26,849] root - INFO - Required number of columns: 31
+[2026-10-22 19:27:26,849] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:27:26,849] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:27:26,955] root - INFO - Data validation completed
+[2026-10-22 19:27:26,955] root - INFO - Initiation of data validation completed
+[2026-10-22 19:27:26,955] root - INFO - Initiating data transformation
+[2026-10-22 19:27:26,955] root - INFO - Initiating data transformation
+[2026-10-22 19:27:26,955] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_27_19/data_validation/validated/train.csv
+[2026-10-22 19:27:26,965] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_27_19/data_validation/validated/test.csv
+[2026-10-22 19:27:26,969] root - INFO - Data transformer object created
+[2026-10-22 19:27:26,989] root - INFO - Data transformation completed
+[2026-10-22 19:27:26,989] root - INFO - Initiation of data transformation completed
+[2026-10-22 19:27:26,990] root - INFO - model training started
+[2026-10-22 19:27:26,990] root - INFO - Initiating model training
+[2026-10-22 19:27:26,990] root - INFO - Initiating model training
+[2026-10-22 19:27:26,990] root - INFO - Loading train and test data
+[2026-10-22 19:27:26,991] root - INFO - Train and test data loaded
+[2026-10-22 19:27:26,991] root - INFO - Training model: LogisticRegression
+[2026-10-22 19:27:31,227] root - INFO - LogisticRegression: 0.9276345545002261
+[2026-10-22 19:27:31,227] root - INFO - Training model: KNeighborsClassifier
+[2026-10-22 19:27:32,521] root - INFO - KNeighborsClassifier: 0.9561284486657621
+[2026-10-22 19:27:32,521] root - INFO - Training model: RandomForestClassifier
+[2026-10-22 19:27:33,944] root - INFO - RandomForestClassifier: 0.9742198100407056
+[2026-10-22 19:27:33,945] root - INFO - Training model: AdaBoostClassifier
+[2026-10-22 19:27:35,205] root - INFO - AdaBoostClassifier: 0.9289914066033469
+[2026-10-22 19:27:35,205] root - INFO - Training model: GradientBoostingClassifier
+[2026-10-22 19:27:38,786] root - INFO - GradientBoostingClassifier: 0.9371325192220714
+[2026-10-22 19:27:38,786] root - INFO - Training model: DecisionTreeClassifier
+[2026-10-22 19:27:38,968] root - INFO - DecisionTreeClassifier: 0.968340117593849
+[2026-10-22 19:27:38,968] root - INFO - Training model: SVC
+[2026-10-22 19:27:43,860] root - INFO - SVC: 0.9651741293532339
+[2026-10-22 19:27:43,862] root - INFO - Model report: {'LogisticRegression': 0.9276345545002261, 'KNeighborsClassifier': 0.9561284486657621, 'RandomForestClassifier': 0.9742198100407056, 'AdaBoostClassifier': 0.9289914066033469, 'GradientBoostingClassifier': 0.9371325192220714, 'DecisionTreeClassifier': 0.968340117593849, 'SVC': 0.9651741293532339}
+[2026-10-22 19:27:43,863] root - INFO - Best model name: RandomForestClassifier
+[2026-10-22 19:27:43,863] root - INFO - Best model score: 0.9742198100407056
+[2026-10-22 19:27:43,863] root - INFO - Model training completed
