@@ -1,0 +1,8 @@
+[2026-10-23 03:09:54,093] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-10-23 03:09:54,109] dagshub - INFO - Accessing as tiwaritejas313-bot
+[2026-10-23 03:09:55,516] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/tiwaritejas313-bot/network-security "HTTP/1.1 200 OK"
+[2026-10-23 03:10:03,961] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-10-23 03:10:03,966] dagshub - INFO - Initialized MLflow to track repo "tiwaritejas313-bot/network-security"
+[2026-10-23 03:10:03,966] dagshub - INFO - Repository tiwaritejas313-bot/network-security initialized!
+[2026-10-23 03:10:16,715] root - INFO - Initiating data ingestion
+[2026-10-23 03:10:18,330] root - INFO - Initiating data ingestion

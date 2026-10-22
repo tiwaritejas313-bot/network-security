@@ -1,0 +1,60 @@
+[2026-10-22 19:46:06,446] httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+[2026-10-22 19:46:07,655] httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+[2026-10-22 19:46:08,795] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-10-22 19:46:08,802] dagshub - INFO - Accessing as tiwaritejas313-bot
+[2026-10-22 19:46:09,885] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/tiwaritejas313-bot/network-security "HTTP/1.1 200 OK"
+[2026-10-22 19:46:11,018] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-10-22 19:46:11,021] dagshub - INFO - Initialized MLflow to track repo "tiwaritejas313-bot/network-security"
+[2026-10-22 19:46:11,021] dagshub - INFO - Repository tiwaritejas313-bot/network-security initialized!
+[2026-10-22 19:46:11,024] root - INFO - Initiating data ingestion
+[2026-10-22 19:46:11,024] root - INFO - Initiating data ingestion
+[2026-10-22 19:46:14,696] root - INFO - Data exported to feature store: ARTIFACTS/10_22_2026_19_46_00/feature_store/phishingdata.csv
+[2026-10-22 19:46:14,702] root - INFO - performed train test split
+[2026-10-22 19:46:14,702] root - INFO - exited split_data_as_train_test method
+[2026-10-22 19:46:14,702] root - INFO - Exporting train and test file path
+[2026-10-22 19:46:14,729] root - INFO - Exported train and test file path
+[2026-10-22 19:46:14,729] root - INFO - Initiating data ingestion
+[2026-10-22 19:46:14,729] root - INFO - Initiation of data ingestion completed
+[2026-10-22 19:46:14,729] root - INFO - Data validation started
+[2026-10-22 19:46:14,731] root - INFO - Inititate data validation
+[2026-10-22 19:46:14,731] root - INFO - Initiating data validation
+[2026-10-22 19:46:14,749] root - INFO - Required number of columns: 31
+[2026-10-22 19:46:14,749] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:46:14,749] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:46:14,749] root - INFO - Required number of columns: 31
+[2026-10-22 19:46:14,749] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:46:14,749] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:46:14,866] root - INFO - Data validation completed
+[2026-10-22 19:46:14,866] root - INFO - Initiation of data validation completed
+[2026-10-22 19:46:14,866] root - INFO - Initiating data transformation
+[2026-10-22 19:46:14,866] root - INFO - Initiating data transformation
+[2026-10-22 19:46:14,866] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_46_00/data_validation/validated/train.csv
+[2026-10-22 19:46:14,877] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_46_00/data_validation/validated/test.csv
+[2026-10-22 19:46:14,881] root - INFO - Data transformer object created
+[2026-10-22 19:46:14,902] root - INFO - Data transformation completed
+[2026-10-22 19:46:14,903] root - INFO - Initiation of data transformation completed
+[2026-10-22 19:46:14,903] root - INFO - model training started
+[2026-10-22 19:46:14,903] root - INFO - Initiating model training
+[2026-10-22 19:46:14,903] root - INFO - Initiating model training
+[2026-10-22 19:46:14,903] root - INFO - Loading train and test data
+[2026-10-22 19:46:14,905] root - INFO - Train and test data loaded
+[2026-10-22 19:46:14,907] root - INFO - Training model: LogisticRegression
+[2026-10-22 19:46:20,060] root - INFO - LogisticRegression: 0.9276345545002261
+[2026-10-22 19:46:20,061] root - INFO - Training model: KNeighborsClassifier
+[2026-10-22 19:46:20,942] root - INFO - KNeighborsClassifier: 0.9561284486657621
+[2026-10-22 19:46:20,942] root - INFO - Training model: RandomForestClassifier
+[2026-10-22 19:46:21,832] root - INFO - RandomForestClassifier: 0.9746720940750792
+[2026-10-22 19:46:21,832] root - INFO - Training model: AdaBoostClassifier
+[2026-10-22 19:46:22,892] root - INFO - AdaBoostClassifier: 0.9289914066033469
+[2026-10-22 19:46:22,892] root - INFO - Training model: GradientBoostingClassifier
+[2026-10-22 19:46:25,659] root - INFO - GradientBoostingClassifier: 0.9371325192220714
+[2026-10-22 19:46:25,659] root - INFO - Training model: DecisionTreeClassifier
+[2026-10-22 19:46:25,829] root - INFO - DecisionTreeClassifier: 0.9678878335594754
+[2026-10-22 19:46:25,829] root - INFO - Training model: SVC
+[2026-10-22 19:46:30,580] root - INFO - SVC: 0.9651741293532339
+[2026-10-22 19:46:30,581] root - INFO - Model report: {'LogisticRegression': 0.9276345545002261, 'KNeighborsClassifier': 0.9561284486657621, 'RandomForestClassifier': 0.9746720940750792, 'AdaBoostClassifier': 0.9289914066033469, 'GradientBoostingClassifier': 0.9371325192220714, 'DecisionTreeClassifier': 0.9678878335594754, 'SVC': 0.9651741293532339}
+[2026-10-22 19:46:30,581] root - INFO - Best model name: RandomForestClassifier
+[2026-10-22 19:46:30,581] root - INFO - Best model score: 0.9746720940750792
+[2026-10-22 19:46:30,581] root - INFO - Model training completed
+[2026-10-22 19:47:06,467] root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='ARTIFACTS/10_22_2026_19_46_00/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9898214486094347, precision_score=0.9898258563298326, recall_score=0.9898236092265943, accuracy_score=0.9898236092265943), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9746309644216652, precision_score=0.9749083265294203, recall_score=0.9746720940750792, accuracy_score=0.9746720940750792))
+[2026-10-22 19:47:06,470] root - INFO - Initiation of model training completed

@@ -1,0 +1,31 @@
+[2026-10-22 19:52:16,269] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-10-22 19:52:16,298] dagshub - INFO - Accessing as tiwaritejas313-bot
+[2026-10-22 19:52:20,406] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/tiwaritejas313-bot/network-security "HTTP/1.1 200 OK"
+[2026-10-22 19:52:21,469] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-10-22 19:52:21,473] dagshub - INFO - Initialized MLflow to track repo "tiwaritejas313-bot/network-security"
+[2026-10-22 19:52:21,473] dagshub - INFO - Repository tiwaritejas313-bot/network-security initialized!
+[2026-10-22 19:52:21,474] root - INFO - Initiating data ingestion
+[2026-10-22 19:52:21,474] root - INFO - Initiating data ingestion
+[2026-10-22 19:52:24,487] root - INFO - Data exported to feature store: ARTIFACTS/10_22_2026_19_52_07/feature_store/phishingdata.csv
+[2026-10-22 19:52:24,493] root - INFO - performed train test split
+[2026-10-22 19:52:24,493] root - INFO - exited split_data_as_train_test method
+[2026-10-22 19:52:24,493] root - INFO - Exporting train and test file path
+[2026-10-22 19:52:24,519] root - INFO - Exported train and test file path
+[2026-10-22 19:52:24,520] root - INFO - Initiating data ingestion
+[2026-10-22 19:52:24,520] root - INFO - Initiation of data ingestion completed
+[2026-10-22 19:52:24,520] root - INFO - Data validation started
+[2026-10-22 19:52:24,522] root - INFO - Inititate data validation
+[2026-10-22 19:52:24,522] root - INFO - Initiating data validation
+[2026-10-22 19:52:24,542] root - INFO - Required number of columns: 31
+[2026-10-22 19:52:24,542] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:52:24,543] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:52:24,543] root - INFO - Required number of columns: 31
+[2026-10-22 19:52:24,543] root - INFO - DataFrame number of columns: 31
+[2026-10-22 19:52:24,543] root - INFO - DataFrame has the required number of columns
+[2026-10-22 19:52:24,649] root - INFO - Data validation completed
+[2026-10-22 19:52:24,649] root - INFO - Initiation of data validation completed
+[2026-10-22 19:52:24,649] root - INFO - Initiating data transformation
+[2026-10-22 19:52:24,650] root - INFO - Initiating data transformation
+[2026-10-22 19:52:24,650] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_52_07/data_validation/validated/train.csv
+[2026-10-22 19:52:24,660] root - INFO - Reading data from ARTIFACTS/10_22_2026_19_52_07/data_validation/validated/test.csv
+[2026-10-22 19:52:24,663] root - INFO - Data transformer object created

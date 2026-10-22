@@ -38,6 +38,8 @@ from sklearn.ensemble import (
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 
+import dagshub
+dagshub.init(repo_owner='tiwaritejas313-bot', repo_name='network-security', mlflow=True)
 
 class ModelTrainer:
 
@@ -204,6 +206,7 @@ class ModelTrainer:
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=network_model
             )
+            save_object("final_model/model.pkl",best_model)
 
             # Model trainer artifact
             model_trainer_artifact = ModelTrainerArtifact(
